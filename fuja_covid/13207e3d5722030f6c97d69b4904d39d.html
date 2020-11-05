@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Empreendedorismo</title>
+      <link rel="stylesheet" href="../css/bootstrap.min.css">
+      <link rel="stylesheet" href="../css/style.css">
+      <link rel="stylesheet" href="../css/fontawesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+   </head>
+   <body>
+      <div id="header" class="header">
+         <nav class="navbar navbar-expand-lg navbar-light text-capitalize">
+            <div class="container">
+               <a class="navbar-brand" href="#">Fuja da COVID</a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#show-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+            </div>
+         </nav>
+      </div>
+      <br/>
+      <br/>
+      <div id="game" class="about_section">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-5">
+                  <h4>FASE 4</h4>
+                  <br/>
+                  <br/>
+                  <h1>Por que devemos ficar em casa?</h1>
+                  <br/>
+                  <h3><a href="2cdaa3ba055c8b1e8dd3d7b5277dc91d.html">Para não pegar o vírus.</a></h3>
+                  <br/>
+                  <h2>OU</h2>
+                  <br/>
+                  <h3><a href="88b1979d90d93bc8ffef54d615be857e.html">Para contaminar os outros.</a></h3>
+               </div>
+               <div class="col-md-6 offset-md-1">
+                  <div class="full text_align_center">
+                     <img class="img-responsive" src="../imgs/fc_04_p.png" alt="#" />
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="../js/jquery-3.3.1.min.js"></script>
+      <script src="../js/bootstrap.min.js"></script>
+      <script>
+         $(function () {
+             
+             'use strict';
+             
+             var winH = $(window).height();
+             
+             $('header').height(winH);  
+             
+             $('header .container > div').css('top', (winH / 2) - ( $('header .container > div').height() / 2));
+             
+             $('.navbar ul li a.search').on('click', function (e) {
+                 e.preventDefault();
+             });
+             $('.navbar a.search').on('click', function () {
+                 $('.navbar form').fadeToggle();
+             });
+             
+             $('.navbar ul.navbar-nav li a').on('click', function (e) {
+                 
+                 var getAttr = $(this).attr('href');
+                 
+                 e.preventDefault();
+                 $('html').animate({scrollTop: $(getAttr).offset().top}, 1000);
+             });
+         })
+      </script>
+   </body>
+</html>
